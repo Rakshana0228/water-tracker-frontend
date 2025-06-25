@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0288d1;
+  font-weight: bold;
+}

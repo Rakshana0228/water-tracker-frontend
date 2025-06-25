@@ -1,0 +1,26 @@
+
+.page-container {
+  padding-top: 160px; /* enough space below fixed header and navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.home-container {
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+}
+
+.droplet {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #4fc3f7;
+  border-radius: 50%;
+  animation: fall 4s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px); opacity: 0.6; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}

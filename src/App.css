@@ -1,38 +1,102 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  background: linear-gradient(-45deg, #cceeff, #e6f7ff, #ccf2ff, #d9f9ff);
+  background-size: 400% 400%;
+  animation: backgroundShift 15s ease infinite;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Droplet animation */
+.droplet {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #4fc3f7;
+  border-radius: 50%;
+  animation: fall 4s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Fixed Header */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   text-align: center;
+  padding: 20px;
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(4, 103, 160, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  position: fixed;
+  top: 90px; /* push below header */
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 50px;
+  padding:10px;
+  margin-top: 10px; /* add gap here */
+  background-color: rgba(168, 224, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+
+.navbar a {
+  text-decoration: dashed;
+  color: #035d8e;
+  font-weight: bold;
+}
+
+/* Page content starts below fixed header + navbar */
+.home-container {
+  text-align: center;
+  padding-top: 180px; /* increased to account for gap */
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+
+/* Optional box for content (used if needed) */
+.home-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  margin: auto;
+}
+
+.logout-btn {
+  background-color: #054797;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
