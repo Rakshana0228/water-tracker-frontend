@@ -16,7 +16,8 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', form);
+      const response = await axios.post('https://water-tracker-backend.vercel.app/api/users/login', form);
+
 
       if (response.data && response.data.userId) {
         localStorage.setItem('user', JSON.stringify({

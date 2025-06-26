@@ -14,7 +14,8 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/users/signup', form);
+      await axios.post('https://water-tracker-backend.vercel.app/api/users/signup', form);
+
       navigate('/login');
     } catch (err) {
       alert('Signup failed');
